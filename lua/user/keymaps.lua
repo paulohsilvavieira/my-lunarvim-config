@@ -67,13 +67,3 @@ lvim.lang.ruby.formatters = {
 nkeymap("zs", ":lua require'telescope.builtin'.spell_suggest()<cr>")
 
 
-
-require("lazy").setup({
-  {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-})
