@@ -29,7 +29,7 @@ vim.api.nvim_set_keymap('n', '<A-S-Down>', ':horizontal resize +1', { noremap = 
 vim.api.nvim_set_keymap('n', '<A-S-Left>', ':vertical resize +1', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-S-Right>', ':vertical resize -1', { noremap = true, silent = true })
 
-local formatters = require "lvim.lsp.null-ls.formatters"
+local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup {
   {
     command = "prettier",
@@ -42,28 +42,3 @@ linters.setup {
   { command = "eslint", filetypes = { "typescript", "typescriptreact" } }
 }
 lvim.format_on_save = true
-
-
-local default_opts = { noremap = true, silent = true }
-
-local keymap = function(mode, from, to, opts)
-  if not opts then opts = default_opts end
-  vim.keymap.set(mode, from, to, opts)
-end
-
-local nkeymap = function(from, to, opts)
-  keymap("n", from, to, opts)
-end
-
-local ikeymap = function(from, to, opts)
-  keymap("i", from, to, opts)
-end
-lvim.lang.ruby.formatters = {
-  {
-    exe = "rufo",
-    args = {},
-  }
-}
-nkeymap("zs", ":lua require'telescope.builtin'.spell_suggest()<cr>")
-
-

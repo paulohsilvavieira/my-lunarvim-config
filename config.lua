@@ -8,8 +8,7 @@ reload("user.banners")
 reload("user.keymaps")
 reload("user.plugins")
 reload("user.dap-ts-js")
-reload("user.nvim-tree")
-reload("user.lazy-git")
+
 
 lvim.colorscheme = "dracula"
 
