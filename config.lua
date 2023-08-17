@@ -8,8 +8,10 @@ reload("user.banners")
 reload("user.keymaps")
 reload("user.plugins")
 reload("user.dap-ts-js")
+reload("user.colorscheme")
+reload("user.formatters")
+reload("user.linters")
+reload("user.vim")
 
 
-lvim.colorscheme = "dracula"
 
-vim.opt.timeoutlen = 500
