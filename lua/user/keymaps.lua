@@ -30,3 +30,13 @@ lvim.keys.normal_mode["<C-v>"] = api.node.open.vertical
 lvim.keys.normal_mode["<C-x>"] = api.node.open.horizontal
 
 
+
+local telescope = require('telescope.builtin')
+
+lvim.builtin.which_key.mappings["f"] = {
+  name = "+FuzzyFinder",
+  f = { "<cmd>Telescope live_grep<cr>", "Find on All Files" },
+  b = { "<cmd>Telescope buffers<cr>", "Find Buffers" }
+}
+
+
