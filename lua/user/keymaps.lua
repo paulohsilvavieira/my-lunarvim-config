@@ -35,3 +35,5 @@ lvim.builtin.which_key.mappings["f"] = {
   g = { "<cmd>Telescope live_grep<cr>", "Find on All Files" },
   f = { "<cmd>Telescope find_files<cr>", "Find File" }
 }
+
+lvim.keys.normal_mode["<C-w>"] = ":BufferKill<CR>"
