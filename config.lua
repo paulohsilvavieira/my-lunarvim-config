@@ -4,14 +4,11 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 --
 --
-reload("user.banners")
 reload("user.keymaps")
 reload("user.plugins")
 reload("user.dap-ts-js")
 reload("user.colorscheme")
 reload("user.formatters")
 reload("user.linters")
+
 reload("user.vim")
-
-
-
