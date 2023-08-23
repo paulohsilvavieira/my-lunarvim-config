@@ -1,4 +1,3 @@
-local api = require('nvim-tree.api')
 
 lvim.leader = "space"
 
@@ -8,13 +7,9 @@ lvim.builtin.dap.active = true
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.normal_mode["<C-S-j>"] = ":m .+1<CR>=="
+lvim.keys.normal_mode["<C-S-k>"] = ":m .+1<CR>=="
 lvim.keys.normal_mode["<C-S-j>"] = ":m .-2<CR>=="
 
-lvim.keys.normal_mode["<A-S-Up>"] = ":horizontal resize -1"
-lvim.keys.normal_mode["<A-S-Down>"] = ":horizontal resize +1"
-lvim.keys.normal_mode["<A-S-Left>"] = ":vertical resize +1"
-lvim.keys.normal_mode["<A-S-Right>"] = ":vertical resize -1"
 
 
 lvim.builtin.which_key.mappings["t"] = {
@@ -26,6 +21,13 @@ lvim.builtin.which_key.mappings["t"] = {
 
 
 
+function Map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+      options = vim.tbl_extend("force", options, opts)
+  end
+  vim.keymap.set(mode, lhs, rhs, options)
+end
 
 
 lvim.builtin.which_key.mappings["f"] = {
@@ -35,3 +37,9 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 
 lvim.keys.normal_mode["<C-w>"] = ":BufferKill<CR>"
+
+Map("n", "<A-Up>", "<cmd>resize -2<CR>")
+Map("n", "<A-Down>", "<cmd>resize +2<CR>")
+Map("n", "<A-Left>", "<cmd>vertical resize -2<CR>")
+Map("n", "<A-Right>", "<cmd>vertical resize +2<CR>")
+
