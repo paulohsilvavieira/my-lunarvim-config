@@ -25,9 +25,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 
 
-lvim.keys.normal_mode["<C-v>"] = api.node.open.vertical
 
-lvim.keys.normal_mode["<C-x>"] = api.node.open.horizontal
 
 
 lvim.builtin.which_key.mappings["f"] = {

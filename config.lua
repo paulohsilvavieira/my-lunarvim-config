@@ -12,3 +12,6 @@ reload("user.formatters")
 reload("user.linters")
 reload("user.vim")
 
+vim.opt.timeoutlen = 500
+vim.cmd [[ set guicursor= ]]
+vim.cmd [[ set number ]]
