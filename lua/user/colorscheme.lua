@@ -1,1 +1,1 @@
-lvim.colorscheme = "dracula"
+lvim.colorscheme = "onedark_vivid"

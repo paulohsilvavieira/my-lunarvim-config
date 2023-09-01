@@ -2,6 +2,12 @@ lvim.plugins = {
   {
     'dracula/vim'
   },
+  {
+    'getomni/neovim'
+  },
+  {
+    'olimorris/onedarkpro.nvim'
+  },
 
   {
     'kdheepak/lazygit.nvim'
