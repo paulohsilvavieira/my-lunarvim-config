@@ -6,7 +6,7 @@ lvim.plugins = {
     'getomni/neovim'
   },
   {
-    'olimorris/onedarkpro.nvim'
+    "folke/tokyonight.nvim"
   },
 
   {

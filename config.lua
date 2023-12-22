@@ -15,3 +15,5 @@ reload("user.vim")
 vim.opt.timeoutlen = 500
 vim.cmd [[ set guicursor= ]]
 vim.cmd [[ set number ]]
+
+lvim.builtin.treesitter.ensure_installed = {}

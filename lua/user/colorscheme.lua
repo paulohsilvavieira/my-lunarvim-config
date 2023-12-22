@@ -1,1 +1,1 @@
-lvim.colorscheme = "onedark_vivid"
+lvim.colorscheme = "tokyonight"
