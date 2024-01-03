@@ -46,15 +46,14 @@ lvim.builtin.lualine.sections.lualine_a = { "mode" }
 
 
 lvim.builtin.lualine.options.component_separators = ''
-lvim.builtin.lualine.options.section_separators = { left = '', right = '󱎕' }
-
+lvim.builtin.lualine.options.section_separators = { left = '', right = '' }
 lvim.builtin.lualine.sections = {
   lualine_a = {
     { 'mode', icons_enabled = true, icon = '', right_padding = 1, separator = { right = '' } },
 
   },
   lualine_b = {
-    { 'branch', icons_enabled, icon = '' },
+    { 'branch', icons_enabled = true, icon = '' },
     {
       'diagnostics',
       sources = { "nvim_diagnostic" },
